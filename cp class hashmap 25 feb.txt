@@ -1,0 +1,150 @@
+ds using hashmaps in java:
+to find data is redundant or not
+value<--->key
+
+
+wap to associate the specified value with specified key in a hashmap:-
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	HashMap<Integer,String> hash_map = new HashMap<Integer,String>();
+	hash_map.put(1,"Red");
+	hash_map.put(2,"Green");
+	hash_map.put(3,"Black");
+	hash_map.put(4,"White");
+	hash_map.put(5,"Blue");
+	for(Map.Entry x:hash_map.entrySet()){
+	    System.out.println(x.getKey()+" "+x.getValue());
+	}
+	}
+}
+
+
+wap to count a no. of key values mapping in a hash map:
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	HashMap<Integer,String> hash_map = new HashMap<Integer,String>();
+	hash_map.put(1,"Red");
+	hash_map.put(2,"Green");
+	hash_map.put(3,"Black");
+	hash_map.put(4,"White");
+	hash_map.put(5,"Blue");
+	System.out.println("Size of the hash map:"+hash_map.size());
+	}
+}
+
+
+wap to copy a hash map into another hashmap:
+
+same key:
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	HashMap<Integer,String> hash_map1 = new HashMap<Integer,String>();
+	HashMap<Integer,String> hash_map2 = new HashMap<Integer,String>();
+	hash_map1.put(1,"Red");
+	hash_map1.put(2,"Green");
+	hash_map1.put(3,"Black");
+    System.out.println("\nValues in first map:"+hash_map1);
+	hash_map2.put(1,"white");
+	hash_map2.put(2,"blue");
+	hash_map2.put(3,"orange");
+    System.out.println("\nValues in second map:"+hash_map2);
+	hash_map2.putAll(hash_map1);
+	System.out.println("\nNow values in second map:"+hash_map2);
+	}
+}
+
+different key-
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	HashMap<Integer,String> hash_map1 = new HashMap<Integer,String>();
+	HashMap<Integer,String> hash_map2 = new HashMap<Integer,String>();
+	hash_map1.put(1,"Red");
+	hash_map1.put(2,"Green");
+	hash_map1.put(3,"Black");
+    System.out.println("\nValues in first map:"+hash_map1);
+	hash_map2.put(4,"white");
+	hash_map2.put(5,"blue");
+	hash_map2.put(6,"orange");
+    System.out.println("\nValues in second map:"+hash_map2);
+	hash_map2.putAll(hash_map1);
+	System.out.println("\nNow values in second map:"+hash_map2);
+	}
+}
+
+
+
+wap to delete all mappings from hashmaps:
+
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	HashMap<Integer,String> hash_map = new HashMap<Integer,String>();
+	hash_map.put(1,"Red");
+	hash_map.put(2,"Green");
+	hash_map.put(3,"Black");
+	hash_map.put(4,"White");
+	hash_map.put(5,"Blue");
+	System.out.println("the original linked map:"+hash_map);
+	hash_map.clear();
+	System.out.println("the final:"+hash_map);
+	}
+}
+
+
+-  isEmpty
+-  import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	HashMap<Integer,String> hash_map = new HashMap<Integer,String>();
+	hash_map.put(1,"Red");
+	hash_map.put(2,"Green");
+	hash_map.put(3,"Black");
+	hash_map.put(4,"White");
+	hash_map.put(5,"Blue");
+	boolean result = hash_map.isEmpty();
+	System.out.println("the original linked map:"+hash_map);
+	hash_map.clear();
+	result = hash_map.isEmpty();
+	System.out.println("is it is empty:"+result);
+	}
+}
+
+
+shallow copy of hashmap:-
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	HashMap<Integer,String> hash_map = new HashMap<Integer,String>();
+	hash_map.put(1,"Red");
+	hash_map.put(2,"Green");
+	hash_map.put(3,"Black");
+	hash_map.put(4,"White");
+	hash_map.put(5,"Blue");
+	System.out.println("the original linked map:"+hash_map);
+	HashMap<Integer,String> new_hash_map = new HashMap<Integer,String>();
+	new_hash_map = (HashMap)hash_map.clone();
+	System.out.println("Cloned map:"+new_hash_map);
+	}
+}
+
+
+
+
